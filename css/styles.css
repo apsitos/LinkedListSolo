@@ -77,7 +77,7 @@ h3 {
   color: #607D8B;
 }
 
-.read {
+.mark {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -92,4 +92,12 @@ h3 {
   margin: 2% 2%;
   color: #455A64;
   text-decoration: none;
+}
+
+.read {
+  background-color: #F2F4F4;
+}
+
+.read .mark {
+  color: #F05A28;
 }
