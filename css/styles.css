@@ -23,15 +23,15 @@ h1 {
 input {
   display: block;
   width: 80%;
-  height: 8%;
+  height: 5%;
   margin: auto;
   margin-bottom: 5%;
   font-size: 100%;
 }
 
 .logo {
-  height: 10%;
-  width: 10%;
+  height: 12%;
+  width: 12%;
 }
 
 .save {
@@ -50,18 +50,46 @@ input {
   height: 100%;
 }
 
+.newbookmark {
+  border: 2px solid #607D8B;
+  width: 80%;
+  position: relative;
+  margin: 5% auto;
+  height: 150px;
+  background-color: #FFFFFF;
+}
+
 h2, h3 {
-  border-bottom: 1px solid #CFD8DC;
-  text-align: center;
+  border-bottom: 2px solid #CFD8DC;
+  text-align: left;
   padding: 10px;
   width: 85%;
   margin: auto;
 }
 
 h2 {
-  color: #455A64
+  font-size: 32px;
+  color: #455A64;
 }
 
 h3 {
+  font-size: 26px;
   color: #607D8B;
+}
+
+.read {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 2% 2%;
+  color: #455A64;
+}
+
+.remove {
+  position: absolute;
+  right:0;
+  bottom: 0;
+  margin: 2% 2%;
+  color: #455A64;
+  text-decoration: none;
 }
