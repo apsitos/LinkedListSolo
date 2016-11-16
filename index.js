@@ -4,9 +4,8 @@ var $save = $('.save');
 
 $($save).on('click', function(event) {
   event.preventDefault();
-  console.log('hi');
-  $('.bookmark').append(`<h2>${$site}</h2>
-    <h3>${$link}</h3>
-    <button type="button" name="read">Mark as Read</button>
-    <button type="button" name="remove">Remove</button>`)
+  $('.bookmark').append(`<section class="newbookmark"><h2>${$site.val()}</h2>
+    <h3>${$link.val()}</h3>
+    <button type="button" name="read">Read</button>
+    <button type="button" name="remove">Delete</button></section>`)
 });
