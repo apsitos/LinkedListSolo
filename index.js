@@ -1,27 +1,40 @@
 var $site = $('.website');
 var $link = $('.url');
 var $save = $('.save');
-var $list = [];
+// var $list = [];
+
+function disableSave() {
+  $($save).attr('disabled', true);
+}
+
+disableSave();
 
 $($save).on('click', function() {
-  $('.bookmark').append(`<section class="newbookmark"><h2>${$site.val()}</h2>
-    <h3>${$link.val()}</h3>
-    <button type="button" name="mark" class="mark">Read</button>
-    <button type="button" name="remove" class="delete">Delete</button></section>`);
+  if ($site.val() || $link.val() === '') {
+     $('h2.error').text("Please enter information into both fields.");
+  } else {
+    $($save).prop('disabled', false);
 
-  $($list).push();
+    $('.bookmark').append(`<section class="newbookmark"><h2>${$site.val()}</h2>
+      <h3>${$link.val()}</h3>
+      <button type="button" name="mark" class="mark">Read</button>
+      <button type="button" name="remove" class="delete">Delete</button></section>`);
 
-  $($site).val('');
+    // $($list).push();
 
-  $($link).val('');
+    $($site).val('');
 
-  $('.mark').on('click', function() {
-    $(this).closest('section').toggleClass('read');
-    console.log('read');
-  });
+    $($link).val('');
 
-  $('.delete').on('click', function() {
-    $(this).closest('section').remove();
-  });
-  
+    disableSave();
+
+    $('.mark').on('click', function() {
+      $(this).closest('section').toggleClass('read');
+      console.log('read');
+    });
+
+    $('.delete').on('click', function() {
+      $(this).closest('section').remove();
+    });
+  }
 });
