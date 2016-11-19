@@ -13,6 +13,16 @@ body {
   text-align: center;
 }
 
+.enter h2 {
+  height: 42px;
+  width: 70%;
+  font-size: 32px;
+  color: #FFFFFF;
+  text-align: center;
+  margin: auto;
+  padding-top: 10%;
+}
+
 h1 {
   color: #FFFFFF;
   font-size: 6vh;
@@ -59,7 +69,7 @@ input {
   background-color: #FFFFFF;
 }
 
-h2, h3 {
+.newbookmark h2, h3 {
   border-bottom: 2px solid #CFD8DC;
   text-align: left;
   padding: 10px;
